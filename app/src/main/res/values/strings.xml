@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Football Scores</string>
+
+    <string name="action_about">About the app</string>
+    <string name="action_overflow">Overflow</string>
+    <string name="action_reload">Reload</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+
+    <!-- Content -->
+    <string name="content_crest">Team crest</string>
+    <string name="content_device_offline">Data connection unavailable</string>
+    <string name="content_empty_score">-</string>
+    <string name="content_image_desc">Team crest for %1$s</string>
+    <string name="content_league">League</string>
+    <string name="content_league_bundesliga1">1. Bundesliga 2015/16</string>
+    <string name="content_league_bundesliga2">2. Bundesliga 2015/16</string>
+    <string name="content_league_bundesliga3">3. Bundesliga 2015/16</string>
+    <string name="content_league_champions">UEFA Champions League</string>
+    <string name="content_league_eredivisie">Eredivisie 2015/16</string>
+    <string name="content_league_ligue1">Ligue 1 2015/16</string>
+    <string name="content_league_ligue2">Ligue 2 2015/16</string>
+    <string name="content_league_premier">Premier League 2015/16</string>
+    <string name="content_league_primeira_liga">Primeira Liga 2015/16</string>
+    <string name="content_league_primera">Primera Division 2015/16</string>
+    <string name="content_league_seria_a">Serie A 2015/16</string>
+    <string name="content_league_segunda_division">Segunda Division 2015/16</string>
+    <string name="content_league_unknown">Unknown league</string>
+    <string name="content_today">Today</string>
+    <string name="content_tomorrow">Tomorrow</string>
+    <string name="content_yesterday">Yesterday</string>
+    <string name="content_match_date_desc">Match date for scores on this screen</string>
+    <string name="content_match_day">Match day</string>
+    <string name="content_match_day_group">Group Stages, Matchday : 6</string>
+    <string name="content_match_day_first_round">First Knockout round</string>
+    <string name="content_match_day_quarterfinal">Quarterfinal</string>
+    <string name="content_match_day_semifinal">Semifinal</string>
+    <string name="content_match_day_final">Final</string>
+    <string name="content_match_time">Match time</string>
+    <string name="content_share_app">Select an app</string>
+    <string name="content_share_message_result">Exciting game!\n\n%1$s: %2$s\n%3$s: %4$s</string>
+    <string name="content_share_message_upcoming">Exciting game!\n\nMatch day: %1$s\nMatch time: %2$s\n\nLeague: %3$s</string>
+    <string name="content_share_subject">Check out this match! %1$s vs %2$s</string>
+
+    <!-- Dialog text -->
+    <string name="dialog_about">About</string>
+    <!-- DONE: Remove or change this placeholder text -->
+    <string name="dialog_about_text">Football Scores retrieves scores from http://api.football-data.org. League data includes the Premier League,
+        Seria A, Bundesliga, Primera Division and the Uefa Champions League.\n\nThis app was originally
+        created by Yahia Khalid Ibn El Walid Ahmed and modified by Kyle Parker as part of the Udacity Android Developer
+        Nanodegree program.\n\nChangelog:\n\n
+        &#8226; Acquired API Key for Football Scores data - updated instructions to direct developers to the web site to create their own key.
+        \n&#8226; Added a "refresh" icon to the toolbar to allow the user to reload the scores.
+        \n&#8226; Added the date above the score - the layout is a bit confusing and easy to lose track of the match date (in the event the
+        scores have not been updated due to lack of network connectivity).
+        \n&#8226; Added functionality to retrieve the scores list from the saved instance state on a device rotation, rather than querying
+        the database again.
+        \n&#8226; Added an overflow icon to the score card to allow users to share the score with friends.
+        \n&#8226; Added a section header for the score cards to group by league name.
+        \n&#8226; Added formatting to highlight the winning team on the score card.
+        \n&#8226; Added a ListView collection widget for today\'s football scores.
+        \n&#8226; Added layout mirroring to the views.
+        \n&#8226; Added "translatable" tag to strings that are excluded from translation - namely the API key and settings keys.
+        \n&#8226; Added a check to determine if the user is online before calling the ScoreService.
+        \n&#8226; Added a loading spinner during data retrieval.
+        \n&#8226; Cleaned up the xml resource files and removed unnecessary values.
+        \n&#8226; Updated About info to use an alert dialog rather than a separate activity.
+        \n&#8226; Updated the accessibility of the app by ensuring all images, buttons and text have relevant content descriptions tags
+        (tags were added programmatically to ensure accurate info and not a generic tag). In addition the app was tested when increasing
+        the font size within the standard Android Settings app.
+        \n&#8226; Updated package structure to organize the Java classes.
+        \n&#8226; Updated resource folders to include drawable-xxxhdpi and framework-specific values.
+        \n&#8226; Updated the string resources to use strings.xml instead of hard-coding values in the app.
+        \n&#8226; Updated data provider to utilize objects - this allows the app to more easily use the RecyclerView as CursorAdapters are
+        not supported, as well as taking advantage of saved instance state for device rotation.
+        \n&#8226; Updated the table layout to include the image url for the team crest - this data is available via the API, however
+        connection throttles make it difficult to retrieve.
+        \n&#8226; Updated the layout of the score card to simplify the view (part of usability improvements).
+        \n&#8226; Updated the ScoresFragment to remove the call to the ScoreService - it was being called five times (once for each new
+        instance of the fragment). This functionality was moved to the MainActivity, where it is only called once each time the app loads.
+        \n&#8226; Updated the league ids and moved the values to a constants class for easier maintainability.
+        \n&#8226; Updated the share action implementation to more closely follow best practices.
+        \n&#8226; Updated the app to use Material Design elements, including CoordinatorLayout, AppBarLayout, Toolbar, RecyclerView, etc.
+        \n&#8226; Update Log calls to utilize a LogUtils helper class - only log during DEBUG mode.
+        \n&#8226; Refactored classes to follow Java naming conventions.
+        \n&#8226; Reviewed and updated error cases - identified in the code and in the changelog above.\n\n
+        Future improvements
+        \n&#8226; Add a setting to allow the user to select which leagues to include in the sync.
+        \n&#8226; Add a setting to allow the user to select their favorite team - receive notifications based on this selection.
+        \n&#8226; Add a configuration view to setup the app widget - select the day to display and the leagues.
+        \n&#8226; Add a detail view for the match, including player stats.
+        \n&#8226; Rework the database to follow a relational schema - teams, scores, players, etc. </string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_close">Close</string>
+    <string name="dialog_loading_scores">Loading scores&#8230;</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_select_leagues">Select favorite leagues</string>
+    <string name="dialog_select_leagues_message">This feature will be implemented in a future release</string>
+
+    <!-- TODO: Update text -->
+    <string name="empty_score">No scores for this day</string>
+
+    <!-- Navdrawer items -->
+    <string name="navdrawer_close" translatable="false">Navdrawer close</string>
+    <string name="navdrawer_open" translatable="false">Navdrawer open</string>
+
+    <string name="settings_league">Select favorite leagues</string>
+    <string name="settings_league_summary">Select the leagues to view the matches and scores.</string>
+
+    <string name="title_settings">Settings</string>
+    <string name="title_todays_scores">Today\'s Football Scores</string>
+
+    <string name="dummy_data" translatable="false">{\"timeFrameStart\":\"2015-06-18\",\"timeFrameEnd\":\"2015-06-19\",\"count\":1,\"fixtures\":[{\"_links\":{\"self\":{\"href\":\"http://api.football-data.org/alpha/fixtures/140514\"},\"soccerseason\":{\"href\":\"http://api.football-data.org/alpha/soccerseasons/357\"},\"homeTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/275\"},\"awayTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/263\"}},\"date\":\"2015-06-19T22:00:00Z\",\"status\":\"FINISHED\",\"matchday\":42,\"homeTeamName\":\"TESTING1\",\"awayTeamName\":\"TESTING2\",\"result\":{\"goalsHomeTeam\":2,\"goalsAwayTeam\":4}},{\"_links\":{\"self\":{\"href\":\"http://api.football-data.org/alpha/fixtures/140514\"},\"soccerseason\":{\"href\":\"http://api.football-data.org/alpha/soccerseasons/357\"},\"homeTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/275\"},\"awayTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/263\"}},\"date\":\"2015-06-19T22:00:00Z\",\"status\":\"FINISHED\",\"matchday\":42,\"homeTeamName\":\"TESTING1\",\"awayTeamName\":\"TESTING2\",\"result\":{\"goalsHomeTeam\":2,\"goalsAwayTeam\":4}},{\"_links\":{\"self\":{\"href\":\"http://api.football-data.org/alpha/fixtures/140514\"},\"soccerseason\":{\"href\":\"http://api.football-data.org/alpha/soccerseasons/357\"},\"homeTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/275\"},\"awayTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/263\"}},\"date\":\"2015-06-19T22:00:00Z\",\"status\":\"FINISHED\",\"matchday\":42,\"homeTeamName\":\"TESTING1\",\"awayTeamName\":\"TESTING2\",\"result\":{\"goalsHomeTeam\":2,\"goalsAwayTeam\":4}},{\"_links\":{\"self\":{\"href\":\"http://api.football-data.org/alpha/fixtures/140514\"},\"soccerseason\":{\"href\":\"http://api.football-data.org/alpha/soccerseasons/357\"},\"homeTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/275\"},\"awayTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/263\"}},\"date\":\"2015-06-19T22:00:00Z\",\"status\":\"FINISHED\",\"matchday\":42,\"homeTeamName\":\"TESTING1\",\"awayTeamName\":\"TESTING2\",\"result\":{\"goalsHomeTeam\":2,\"goalsAwayTeam\":4}},{\"_links\":{\"self\":{\"href\":\"http://api.football-data.org/alpha/fixtures/140514\"},\"soccerseason\":{\"href\":\"http://api.football-data.org/alpha/soccerseasons/357\"},\"homeTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/275\"},\"awayTeam\":{\"href\":\"http://api.football-data.org/alpha/teams/263\"}},\"date\":\"2015-06-19T22:00:00Z\",\"status\":\"FINISHED\",\"matchday\":42,\"homeTeamName\":\"TESTING1\",\"awayTeamName\":\"TESTING2\",\"result\":{\"goalsHomeTeam\":2,\"goalsAwayTeam\":4}}]}</string>
+</resources>

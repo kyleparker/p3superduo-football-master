@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TODO: Sign up for API Key at http://api.football-data.org/register -->
+    <string name="api_key" translatable="false">-- REPLACE --</string>
+    <string name="settings_league_key">settingsLeague</string>
+</resources>
