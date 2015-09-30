@@ -29,6 +29,7 @@ import barqsoft.footballscores.object.Score;
 // DONE: Add overflow icon to the cardview to handle the share action
 // DONE: Highlight the winning team
 // TODO: Swap out the missing team icon with a generic icon
+// DONE: Added team crest images from Chris Olsen - https://github.com/chrisolsen/football-scores-svgs.
 // DONE: Consider adding a section header - group by league
 /**
  * Adapter for the score list

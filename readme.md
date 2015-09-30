@@ -13,6 +13,7 @@ updated due to lack of network connectivity).
 - Added "translatable" tag to strings that are excluded from translation - namely the API key and settings keys.
 - Added a check to determine if the user is online before calling the ScoreService.
 - Added a loading spinner during data retrieval.
+- Added team crest images based on files uploaded by Chris Olsen at https://github.com/chrisolsen/football-scores-svgs.
 - Cleaned up the xml resource files and removed unnecessary values.
 - Updated About info to use an alert dialog rather than a separate activity.
 - Updated the accessibility of the app by ensuring all images, buttons and text have relevant content descriptions tags (tags were added programmatically

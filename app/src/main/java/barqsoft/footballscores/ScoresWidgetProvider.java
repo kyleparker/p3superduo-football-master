@@ -11,9 +11,11 @@ import android.view.View;
 import android.widget.RemoteViews;
 
 import barqsoft.footballscores.content.ScoresWidgetService;
-import barqsoft.footballscores.utils.LogUtils;
 
 /**
+ * AppWidget for today's football scores
+ *
+ * Based on sample code from Android SDK
  *
  * Created by kyleparker on 9/28/2015.
  */
@@ -24,7 +26,6 @@ public class ScoresWidgetProvider extends AppWidgetProvider {
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
 
-        LogUtils.LOGE("***> provider", "onReceive " + intent.getAction());
         if (intent.getAction().equals(REFRESH_ACTION)) {
             AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
             int[] appWidgetIds = appWidgetManager.getAppWidgetIds(new ComponentName(context, ScoresWidgetProvider.class));
@@ -46,7 +47,6 @@ public class ScoresWidgetProvider extends AppWidgetProvider {
             RemoteViews remoteViews = buildLayout(context, appWidgetId, false);
             appWidgetManager.updateAppWidget(appWidgetId, remoteViews);
         }
-        LogUtils.LOGE("***> provider", "onUpdate");
 
         super.onUpdate(context, appWidgetManager, appWidgetIds);
     }

@@ -24,6 +24,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 /**
  * Utilities for creating dialogs.
  *
+ * MaterialDialog implementation based on code from https://github.com/afollestad/material-dialogs
  * @author Kyle Parker
  */
 public class DialogUtils {
