@@ -139,22 +139,23 @@ public class Adapters {
                         }
                         viewHolder.overflow.setOnClickListener(mOverflowClickListener);
                         viewHolder.overflow.setTag(R.id.score_list_menu_position, position);
+                        viewHolder.overflow.setContentDescription(mContext.getString(R.string.content_overflow, item.getHomeName(), item.getAwayName()));
                     }
                 }
-            }
 
-            final GridSLM.LayoutParams lp = GridSLM.LayoutParams.from(itemView.getLayoutParams());
-            // Overrides xml attrs, could use different layouts too.
-            if (lineItem.isHeader) {
-                lp.headerDisplay = LayoutManager.LayoutParams.HEADER_STICKY | LayoutManager.LayoutParams.HEADER_INLINE;
-                lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
-                lp.headerEndMarginIsAuto = true;
-                lp.headerStartMarginIsAuto = true;
+                final GridSLM.LayoutParams lp = GridSLM.LayoutParams.from(itemView.getLayoutParams());
+                // Overrides xml attrs, could use different layouts too.
+                if (lineItem.isHeader) {
+                    lp.headerDisplay = LayoutManager.LayoutParams.HEADER_STICKY | LayoutManager.LayoutParams.HEADER_INLINE;
+                    lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
+                    lp.headerEndMarginIsAuto = true;
+                    lp.headerStartMarginIsAuto = true;
+                }
+                lp.setSlm(GridSLM.ID);
+                lp.setNumColumns(mNumColumns);
+                lp.setFirstPosition(lineItem.sectionFirstPosition);
+                itemView.setLayoutParams(lp);
             }
-            lp.setSlm(GridSLM.ID);
-            lp.setNumColumns(mNumColumns);
-            lp.setFirstPosition(lineItem.sectionFirstPosition);
-            itemView.setLayoutParams(lp);
         }
 
         @Override

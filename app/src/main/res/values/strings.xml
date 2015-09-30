@@ -27,9 +27,6 @@
     <string name="content_league_seria_a">Serie A 2015/16</string>
     <string name="content_league_segunda_division">Segunda Division 2015/16</string>
     <string name="content_league_unknown">Unknown league</string>
-    <string name="content_today">Today</string>
-    <string name="content_tomorrow">Tomorrow</string>
-    <string name="content_yesterday">Yesterday</string>
     <string name="content_match_date_desc">Match date for scores on this screen</string>
     <string name="content_match_day">Match day</string>
     <string name="content_match_day_group">Group Stages, Matchday : 6</string>
@@ -38,10 +35,14 @@
     <string name="content_match_day_semifinal">Semifinal</string>
     <string name="content_match_day_final">Final</string>
     <string name="content_match_time">Match time</string>
+    <string name="content_overflow">Overflow menu for %1$s vs %2$s</string>
     <string name="content_share_app">Select an app</string>
     <string name="content_share_message_result">Exciting game!\n\n%1$s: %2$s\n%3$s: %4$s</string>
     <string name="content_share_message_upcoming">Exciting game!\n\nMatch day: %1$s\nMatch time: %2$s\n\nLeague: %3$s</string>
     <string name="content_share_subject">Check out this match! %1$s vs %2$s</string>
+    <string name="content_today">Today</string>
+    <string name="content_tomorrow">Tomorrow</string>
+    <string name="content_yesterday">Yesterday</string>
 
     <!-- Dialog text -->
     <string name="dialog_about">About</string>

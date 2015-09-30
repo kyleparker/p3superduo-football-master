@@ -33,8 +33,7 @@
                     android:id="@+id/home_crest"
                     android:layout_width="@dimen/crest_image_width"
                     android:layout_height="@dimen/crest_image_height"
-                    android:layout_gravity="start|left"
-                    android:contentDescription="@string/content_crest"/>
+                    android:layout_gravity="start|left" />
 
                 <TextView
                     android:id="@+id/home_name"
@@ -67,8 +66,7 @@
                     android:id="@+id/away_crest"
                     android:layout_width="@dimen/crest_image_width"
                     android:layout_height="@dimen/crest_image_height"
-                    android:layout_gravity="start|left"
-                    android:contentDescription="@string/content_crest"/>
+                    android:layout_gravity="start|left" />
 
                 <TextView
                     android:id="@+id/away_name"

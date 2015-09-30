@@ -20,6 +20,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
  */
 public class SettingsActivity extends BaseActivity {
     private final static String SETTINGS_NAME = "SettingsActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         mShouldBeFloatingWindow = shouldBeFloatingWindow();
